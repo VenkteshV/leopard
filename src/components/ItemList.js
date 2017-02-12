@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { itemsFetchData } from '../actions/items';
+import {Link} from 'react-router';
 
 class ItemList extends Component {
     componentDidMount() {
-        this.props.fetchData('http://5826ed963900d612000138bd.mockapi.io/items');
+        this.props.fetchData('http://dq.lvh.me:3000/clients');
     }
 
     render() {
@@ -17,13 +18,29 @@ class ItemList extends Component {
         }
 
         return (
-            <ul>
+          <div className ="container">
+  <nav className ="navbar navbar-default">
+  <div className ="container-fluid">
+  <div className ="navbar-header">
+  <a className ="navbar-brand" href="#">ACES </a>
+  </div>
+          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul className="nav navbar-nav">
                 {this.props.items.map((item) => (
+
                     <li key={item.id}>
-                        {item.label}
+                    <Link to={`/datagrid/${item.subdomain}`}> {item.name}</Link>
+
                     </li>
+
+
                 ))}
             </ul>
+            </div>
+            </div>
+    </nav>
+    </div>
+
         );
     }
 }
