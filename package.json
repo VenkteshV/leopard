@@ -1,7 +1,7 @@
 {
-  "name": "dummys-guide-to-redux-and-thunk-react",
+  "name": "whitelabel demo",
   "version": "1.0.0",
-  "description": "A Dummy's Guide to Redux and Thunk in React",
+  "description": "whitelabel demo",
   "private": true,
   "scripts": {
     "build": "nwb build-react-app",
@@ -25,6 +25,6 @@
     "nwb": "0.12.x"
   },
   "author": "",
-  "license": "MIT",
+  "license": "",
   "repository": ""
 }
